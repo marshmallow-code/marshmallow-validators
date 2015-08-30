@@ -49,7 +49,6 @@ html_theme_options = {
     'github_repo': 'marshmallow-validators',
     'github_banner': True,
     'github_button': False,
-    'gratipay_user': 'sloria',
     'code_font_size': '0.85em',
     'warn_bg': '#FFC',
     'warn_border': '#EEE',
@@ -66,8 +65,8 @@ html_theme_options = {
 
 html_sidebars = {
     'index': [
-        'about.html', 'localtoc.html', 'searchbox.html'
+        'about.html', 'useful-links.html', 'localtoc.html', 'searchbox.html'
     ],
-    '**': ['about.html',
+    '**': ['about.html', 'useful-links.html',
            'localtoc.html', 'relations.html', 'searchbox.html']
 }

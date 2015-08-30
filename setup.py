@@ -35,7 +35,7 @@ def read(fname):
 setup(
     name='marshmallow-validators',
     version=__version__,
-    description='Use 3rd-party validators (e.g. WTForms and colander) with marshmallow',
+    description='Use 3rd-party validators (e.g. from WTForms and colander) with marshmallow',
     long_description=read('README.rst'),
     author='Steven Loria',
     author_email='sloria1@gmail.com',
