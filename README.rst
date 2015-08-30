@@ -3,11 +3,11 @@ marshmallow-validators
 **********************
 
 .. image:: https://img.shields.io/pypi/v/marshmallow-validators.svg
-    :target: https://pypi.python.org/pypi/marshmallow
+    :target: https://pypi.python.org/pypi/marshmallow-validators
     :alt: Latest version
 
 .. image:: https://img.shields.io/travis/marshmallow-code/marshmallow-validators/pypi.svg
-    :target: https://travis-ci.org/marshmallow-code/marshmallow
+    :target: https://travis-ci.org/marshmallow-code/marshmallow-validators
     :alt: Travis-CI
 
 Homepage: http://marshmallow-validators.rtfd.org/
