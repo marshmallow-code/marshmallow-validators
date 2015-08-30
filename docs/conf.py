@@ -43,7 +43,7 @@ templates_path = ['_templates']
 html_show_sourcelink = False
 
 html_theme_options = {
-    'description': 'Use 3rd-party validators with marshmallow',
+    'description': 'Use 3rd-party validators with marshmallow.',
     'description_font_style': 'italic',
     'github_user': 'marshmallow-code',
     'github_repo': 'marshmallow-validators',
@@ -64,10 +64,10 @@ html_theme_options = {
     ])
 }
 
-# html_sidebars = {
-#     'index': [
-#         'about.html', 'useful-links.html', 'searchbox.html', 'donate.html',
-#     ],
-#     '**': ['about.html', 'useful-links.html',
-#            'localtoc.html', 'relations.html', 'searchbox.html', 'donate.html']
-# }
+html_sidebars = {
+    'index': [
+        'about.html', 'localtoc.html', 'searchbox.html'
+    ],
+    '**': ['about.html',
+           'localtoc.html', 'relations.html', 'searchbox.html']
+}
