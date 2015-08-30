@@ -1,0 +1,9 @@
+# soft dependencies
+webargs>=0.11.0
+WTForms>=2.0.1
+colander>=1.0
+
+marshmallow>=2.0.0b4
+sphinx
+git+https://github.com/sloria/alabaster.git@sloria
+sphinx-issues==0.2.0
