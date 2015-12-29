@@ -53,12 +53,6 @@ Base converter class
 .. autoclass:: marshmallow_validators.core.BaseConverter
     :members:
 
-
-ValidationError with optional webargs support
-=============================================
-
-.. autoexception:: marshmallow_validators.ValidationError
-
 Project Info
 ============
 
