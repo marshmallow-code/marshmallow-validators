@@ -1,7 +1,7 @@
 Changelog
 ---------
 
-2.0.0 (unreleased)
+2.0.0 (2015-12-28)
 ++++++++++++++++++
 
 - Fix compatibility with webargs>=0.16.0.
