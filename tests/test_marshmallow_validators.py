@@ -5,39 +5,6 @@ import pytest
 
 from marshmallow import fields, Schema
 from marshmallow.exceptions import ValidationError as MarshmallowValidationError
-from webargs import Arg, ValidationError as WebargsValidationError
-
-from marshmallow_validators import ValidationError
-
-
-class TestValidationError:
-
-    def test_marshmallow_validation(self):
-        def validator(val):
-            raise ValidationError('oh no')
-
-        f = fields.Field(validate=validator)
-        with pytest.raises(MarshmallowValidationError):
-            f.deserialize('')
-
-    def test_webargs_validation(self):
-        def validator(val):
-            raise ValidationError('oh no')
-
-        a = Arg(validate=validator)
-        with pytest.raises(WebargsValidationError):
-            a.validated('', '')
-
-    def test_webargs_validation_with_status_code(self):
-
-        def validator(val):
-            raise ValidationError('denied', status_code=401)
-        a = Arg(validate=validator)
-        with pytest.raises(WebargsValidationError) as excinfo:
-            a.validated('', '')
-        exc = excinfo.value
-        assert exc.status_code == 401
-
 
 # WTForms
 
@@ -135,4 +102,3 @@ class TestColanderValidation:
         with pytest.raises(MarshmallowValidationError) as excinfo:
             field.deserialize([2])
         assert 'One or more of the choices you made was not acceptable' in str(excinfo)
-

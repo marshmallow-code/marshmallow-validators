@@ -1,34 +1,15 @@
 # -*- coding: utf-8 -*-
-
-from marshmallow import ValidationError as MarshmallowValidationError
+# Use webargs' ValidationError if available. It is compatible with
+# marshmallow's ValidationError.
 try:
-    from webargs import ValidationError as WebargsValidationError
+    from webargs import ValidationError
 except ImportError:
-    HAS_WEBARGS = False
-else:
-    HAS_WEBARGS = True
+    from marshmallow import ValidationError
 
-if HAS_WEBARGS:
-    class ValidationError(WebargsValidationError, MarshmallowValidationError):
-        """Raised when a validation fails. Inherits from both
-        webargs' ``ValidationError`` (if webargs is installed) and marshmallow's
-        ``ValidationError`` so that the same validation functions can be used in either library.
-        """
-        def __init__(self, message, *args, **kwargs):
-            status_code = kwargs.pop('status_code', 400)
-            WebargsValidationError.__init__(self, message, status_code=status_code)
-            MarshmallowValidationError.__init__(self, message, *args, **kwargs)
-else:
-    class ValidationError(MarshmallowValidationError):
-        """Raised when a validation fails. Inherits from both
-        webargs' ``ValidationError`` (if webargs is installed) and marshmallow's
-        ``ValidationError`` so that the same validation functions can be used in either library.
-        """
-
-        def __init__(self, message, field=None, **_):
-            # make the signature compatible with the above impl for when not HAS_WEBARGS
-            super(ValidationError, self).__init__(message, field)
-
+__all__ = [
+    'BaseConverter',
+    'ValidationError',
+]
 
 class BaseConverter(object):
     """Base converter validator that converts a third-party validators into
