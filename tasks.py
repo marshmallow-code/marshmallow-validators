@@ -4,6 +4,7 @@ import sys
 import webbrowser
 
 from invoke import task, run
+import pytest
 
 docs_dir = 'docs'
 build_dir = os.path.join(docs_dir, '_build')
@@ -11,7 +12,8 @@ build_dir = os.path.join(docs_dir, '_build')
 @task
 def test():
     flake()
-    run('py.test', echo=True)
+    retcode = pytest.main([])
+    sys.exit(retcode)
 
 @task
 def flake():

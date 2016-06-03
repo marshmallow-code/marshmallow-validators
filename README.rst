@@ -2,8 +2,8 @@
 marshmallow-validators
 **********************
 
-.. image:: https://img.shields.io/pypi/v/marshmallow-validators.svg
-    :target: https://pypi.python.org/pypi/marshmallow-validators
+.. image:: https://badge.fury.io/py/marshmallow-validators.svg
+    :target: http://badge.fury.io/py/marshmallow-validators
     :alt: Latest version
 
 .. image:: https://img.shields.io/travis/marshmallow-code/marshmallow-validators/pypi.svg
