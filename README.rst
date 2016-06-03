@@ -10,7 +10,7 @@ marshmallow-validators
     :target: https://travis-ci.org/marshmallow-code/marshmallow-validators
     :alt: Travis-CI
 
-Homepage: http://marshmallow-validators.rtfd.org/
+Homepage: https://marshmallow-validators.readthedocs.io/
 
 Use 3rd-party validators (e.g. from WTForms and colander) with marshmallow.
 
@@ -46,13 +46,13 @@ Get It Now
 Documentation
 =============
 
-Full documentation is available at http://marshmallow-validators.rtfd.org/ .
+Full documentation is available at https://marshmallow-validators.readthedocs.io/ .
 
 Project Links
 =============
 
-- Docs: http://marshmallow-validators.rtfd.org/
-- Changelog: http://marshmallow-validators.readthedocs.org/en/latest/changelog.html
+- Docs: https://marshmallow-validators.readthedocs.io/
+- Changelog: https://marshmallow-validators.readthedocs.io/en/latest/changelog.html
 - PyPI: https://pypi.python.org/pypi/marshmallow-validators
 - Issues: https://github.com/marshmallow-code/marshmallow-validators/issues
 
