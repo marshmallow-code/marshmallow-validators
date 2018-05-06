@@ -1,9 +1,11 @@
 Changelog
 ---------
 
-(unreleased)
+3.0.0 (2018-05-06)
+++++++++++++++++++
 
 - Drop support for Python 3.3. Version 2.7 and >=3.4 are supported.
+- Test against marshmallow 3.
 
 2.0.0 (2015-12-28)
 ++++++++++++++++++
