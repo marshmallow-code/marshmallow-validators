@@ -1,5 +1,5 @@
 invoke
-flake8==2.5.4
+flake8==3.5.0
 
 # soft dependencies
 webargs>=0.11.0
@@ -10,7 +10,3 @@ colander>=1.0
 pytest
 tox>=1.5.0
 mock
-
-# packaging
-wheel
-twine

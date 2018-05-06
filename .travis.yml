@@ -1,21 +1,32 @@
-# Config file for automatic testing at travis-ci.org
-
-# Containerized builds
 sudo: false
-
 language: python
-
 python:
-  - "3.5"
-  - "3.4"
-  - "3.3"
-  - "2.7"
-  - "pypy"
-
+- '3.6'
+- '3.5'
+- '3.4'
+- '2.7'
+- pypy
 install:
-  - pip install -r dev-requirements.txt
-  - pip install -U .
+- pip install -r dev-requirements.txt
+- pip install -U .
 before_script:
-  - flake8 .
-
-script: py.test
+- flake8 .
+script: pytest
+jobs:
+  include:
+  - stage: PyPI Release
+    if: tag IS present
+    python: '3.6'
+    env: []
+    install: true
+    before_script: true
+    script: echo "Releasing to PyPI..."
+    after_success: true
+    deploy:
+      provider: pypi
+      user: sloria
+      on:
+        tags: true
+      distributions: sdist bdist_wheel
+      password:
+        secure: bV18LrvWl63yQUAYv2PZQTqL2ieveXhrPjftSLEhr8j2KfPydhQW4Zm08aPCcslmtAKIfuW6gSOP/tg4or3yiZPymCZh6+W1QOW52Wg9UsoEKaHf6GBoigthxa4+PHg7oMGHodw5jSipQSJSNsarP/YB62I/Yg8+nk8Jt0tAeYEu+MZ4+JvixOpnbTTHf0RNpflkEhPK5Rz10gS79sS0ZivVNtrQDtkqUH7/2tdSTGqldr0U1ybpBdO8agBI1/djlZPb1cLIHJd/FppJbcY13FkYjw1Flmm/Cq+yBRfCK8p9aeKWSNj7UtUup/K9H2gZATFQrO5DyaBUAdEsBEWlzR/14GJaGZ5YcW6/8nw4Xa+59VRznfNanqab+itmnnxNywaRCyd598zVAw7uJs2MsYSyDrjXyFOOdx6wOiI0zqxiVy7T3qNShthBe4SHzXuSuNzeQDOVQUzJJtUHzLLojFSzEDp9uLi7LrT3Z0gGzDZJWUx6c0u/kZYpKUYfTlcGoHvKlnEZCnLfcJr8tHAdcjvI7vEUHcFnT9yhrMvyyYUPDQABE9KyROQtK9C42QeCCe38WhTh3DqlMnUT5xlF67IAqgD8ZgZOn5FDIXpYocX6m9NwFSzgq522EwNaGVAhPqiaataDlPBT4XxUg/ExE+SsayduhCsSuRPHQoxyl+g=

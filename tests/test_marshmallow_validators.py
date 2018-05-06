@@ -2,15 +2,16 @@
 from __future__ import absolute_import, unicode_literals
 
 import pytest
+from colander import ContainsOnly
+from marshmallow import Schema, fields
+from marshmallow.exceptions import \
+    ValidationError as MarshmallowValidationError
+from wtforms.validators import AnyOf, Length, NoneOf
 
-from marshmallow import fields, Schema
-from marshmallow.exceptions import ValidationError as MarshmallowValidationError
+from marshmallow_validators.colander import from_colander
+from marshmallow_validators.wtforms import from_wtforms, make_converter
 
 # WTForms
-
-from marshmallow_validators.wtforms import from_wtforms, make_converter
-from wtforms.validators import AnyOf, NoneOf, Length
-
 
 class TestWTFormsValidation:
 
@@ -90,8 +91,6 @@ class TestWTFormsValidation:
 
 # Colander
 
-from marshmallow_validators.colander import from_colander
-from colander import ContainsOnly
 
 class TestColanderValidation:
     def test_from_colander(self):

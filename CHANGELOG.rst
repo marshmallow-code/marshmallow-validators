@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+(unreleased)
+
+- Drop support for Python 3.3. Version 2.7 and >=3.4 are supported.
+
 2.0.0 (2015-12-28)
 ++++++++++++++++++
 

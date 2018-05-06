@@ -20,6 +20,7 @@ class DummyField(object):
     def ngettext(self, singular, plural, n):
         return self._translations.ngettext(singular, plural, n)
 
+
 dummy_form = dict()
 
 class from_wtforms(BaseConverter):
