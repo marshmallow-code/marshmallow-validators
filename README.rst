@@ -10,6 +10,10 @@ marshmallow-validators
     :target: https://travis-ci.org/marshmallow-code/marshmallow-validators
     :alt: Travis-CI
 
+.. image:: https://img.shields.io/badge/marshmallow-3-blue.svg
+    :target: https://marshmallow.readthedocs.io/en/latest/upgrading.html
+    :alt: marshmallow 3 compatible
+
 Homepage: https://marshmallow-validators.readthedocs.io/
 
 Use 3rd-party validators (e.g. from WTForms and colander) with marshmallow.

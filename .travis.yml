@@ -6,9 +6,15 @@ python:
 - '3.4'
 - '2.7'
 - pypy
+env:
+# Lowest supported version
+- MARSHMALLOW_VERSION="==2.7.0"
+# Latest release
+- MARSHMALLOW_VERSION=""
 install:
-- pip install -r dev-requirements.txt
-- pip install -U .
+- travis_retry pip install -r dev-requirements.txt
+- travis_retry pip install -U .
+- travis_retry pip install -U marshmallow"$MARSHMALLOW_VERSION" --pre
 before_script:
 - flake8 .
 script: pytest
