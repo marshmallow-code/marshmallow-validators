@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from collections import OrderedDict
 import datetime as dt
 import os
 import sys
 
 import alabaster
-from marshmallow.compat import OrderedDict
 sys.path.insert(0, os.path.abspath('..'))
-import marshmallow_validators
+import marshmallow_validators  # noqa
 
 extensions = [
     'sphinx.ext.autodoc',
