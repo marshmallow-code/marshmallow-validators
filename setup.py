@@ -59,4 +59,8 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     test_suite='tests',
+    project_urls={
+        'Bug Reports': 'https://github.com/marshmallow-code/marshmallow-validators/issues',
+        'Funding': 'https://opencollective.com/marshmallow',
+    }
 )
