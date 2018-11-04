@@ -6,4 +6,4 @@ colander>=1.0
 marshmallow>=2.0.0b4
 sphinx
 git+https://github.com/sloria/alabaster.git@sloria
-sphinx-issues==0.2.0
+sphinx-issues==1.1.0
