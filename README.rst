@@ -2,17 +2,17 @@
 marshmallow-validators
 **********************
 
-.. image:: https://badge.fury.io/py/marshmallow-validators.svg
-    :target: http://badge.fury.io/py/marshmallow-validators
-    :alt: Latest version
+.. image:: https://badgen.net/pypi/v/marshmallow-validators
+    :target: https://badge.fury.io/py/marshmallow-validators
+    :alt: PyPI version
 
-.. image:: https://img.shields.io/travis/marshmallow-code/marshmallow-validators/pypi.svg
+.. image:: https://badgen.net/travis/marshmallow-code/marshmallow-validators/dev
     :target: https://travis-ci.org/marshmallow-code/marshmallow-validators
-    :alt: Travis-CI
+    :alt: TravisCI build status
 
-.. image:: https://img.shields.io/badge/marshmallow-3-blue.svg
+.. image:: https://badgen.net/badge/marshmallow/2,3?list=1
     :target: https://marshmallow.readthedocs.io/en/latest/upgrading.html
-    :alt: marshmallow 3 compatible
+    :alt: marshmallow 2/3 compatible
 
 Homepage: https://marshmallow-validators.readthedocs.io/
 
