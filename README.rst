@@ -3,7 +3,7 @@ marshmallow-validators
 **********************
 
 .. image:: https://badgen.net/pypi/v/marshmallow-validators
-    :target: https://badge.fury.io/py/marshmallow-validators
+    :target: https://pypi.org/project/marshmallow-validators/
     :alt: PyPI version
 
 .. image:: https://badgen.net/travis/marshmallow-code/marshmallow-validators/dev
