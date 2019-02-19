@@ -1,5 +1,5 @@
 invoke
-flake8==3.7.5
+flake8==3.7.6
 
 # soft dependencies
 webargs>=0.11.0
