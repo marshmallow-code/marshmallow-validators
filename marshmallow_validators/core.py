@@ -6,10 +6,8 @@ try:
 except ImportError:
     from marshmallow import ValidationError
 
-__all__ = [
-    'BaseConverter',
-    'ValidationError',
-]
+__all__ = ["BaseConverter", "ValidationError"]
+
 
 class BaseConverter(object):
     """Base converter validator that converts a third-party validators into
@@ -28,7 +26,7 @@ class BaseConverter(object):
         :param validator: A 3rd-party validator object
         :return: A callable marshmallow validator
         """
-        raise NotImplementedError('Converter must implement make_validator')
+        raise NotImplementedError("Converter must implement make_validator")
 
     def __call__(self, val):
         errors = []

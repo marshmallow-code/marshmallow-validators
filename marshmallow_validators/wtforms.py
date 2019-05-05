@@ -7,6 +7,7 @@ from wtforms.validators import ValidationError as WTFValidationError
 
 from .core import BaseConverter, ValidationError
 
+
 class DummyField(object):
     def __init__(self, data, errors=(), raw_data=None, _translations=None):
         self.data = data
@@ -22,6 +23,7 @@ class DummyField(object):
 
 
 dummy_form = dict()
+
 
 class from_wtforms(BaseConverter):
     """Convert a WTForms validator from `wtforms.validators` to a marshmallow validator.
@@ -40,6 +42,7 @@ class from_wtforms(BaseConverter):
     :param list locales: List of locales for error messages, in order. If `None`, will
         try to use locale information from the environment.
     """
+
     def __init__(self, validators, locales=None):
         BaseConverter.__init__(self, validators)
         self._translations = i18n.get_translations(locales)
@@ -51,7 +54,9 @@ class from_wtforms(BaseConverter):
                 wtf_validator(dummy_form, field)
             except WTFValidationError as err:
                 raise ValidationError(err.args[0])
+
         return marshmallow_validator
+
 
 def make_converter(locales=None):
     """Return a WTForms validator converter that uses the
