@@ -5,6 +5,7 @@ from .core import ValidationError, BaseConverter
 
 from colander import Invalid
 
+
 class from_colander(BaseConverter):
     """Convert a colander validator to a marshmallow validator.
 
@@ -27,4 +28,5 @@ class from_colander(BaseConverter):
                 colander_validator(None, value)
             except Invalid as err:
                 raise ValidationError(err.msg.interpolate())
+
         return marshmallow_validator
