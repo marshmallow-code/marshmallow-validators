@@ -8,7 +8,7 @@ EXTRAS_REQUIRE = {
     "lint": [
         "flake8==3.7.8",
         'flake8-bugbear==19.8.0; python_version >= "3.5"',
-        "pre-commit==1.18.2",
+        "pre-commit~=1.18",
     ],
     "tests": ["pytest", "mock", "webargs>=0.11.0", "WTForms>=2.0.1", "colander>=1.0"],
 }
