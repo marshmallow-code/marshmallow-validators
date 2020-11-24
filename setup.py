@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 INSTALL_REQUIRES = ("marshmallow>=2.15.2",)
 EXTRAS_REQUIRE = {
     "lint": [
-        "flake8==3.8.1",
+        "flake8==3.8.4",
         'flake8-bugbear==20.11.1; python_version >= "3.5"',
         "pre-commit~=2.4",
     ],
