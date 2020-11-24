@@ -7,7 +7,7 @@ INSTALL_REQUIRES = ("marshmallow>=2.15.2",)
 EXTRAS_REQUIRE = {
     "lint": [
         "flake8==3.8.1",
-        'flake8-bugbear==20.1.0; python_version >= "3.5"',
+        'flake8-bugbear==20.11.1; python_version >= "3.5"',
         "pre-commit~=2.4",
     ],
     "tests": ["pytest", "mock", "webargs>=0.11.0", "WTForms>=2.0.1", "colander>=1.0"],
